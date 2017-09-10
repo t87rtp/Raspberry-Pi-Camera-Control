@@ -11,7 +11,7 @@ q = urlparse.parse_qs(q_str)
 
 my_stream = io.BytesIO()
 with picamera.PiCamera() as camera:
-    camera.resolution = (q["w"][0],q["h"][0])
+    camera.resolution = (int(q["w"][0]),int(q["h"][0]))
     #camera.start_preview()
     # Camera warm-up time
     #time.sleep(2)
