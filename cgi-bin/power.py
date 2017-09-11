@@ -6,7 +6,7 @@ import urlparse
 
 q_str = os.environ.get("QUERY_STRING", "")
 q = urlparse.parse_qs(q_str)
-command = "sudo shutdown -r now"
+command = "sudo shutdown -h now"
 if q["mode"]:
 	if q["mode"][0] == "reboot":
 		command = "sudo reboot"
